@@ -5,7 +5,7 @@
 using namespace std;
 int* makeString(int column_count, int diff)
 {
-    int val = 123;
+    int val = 17;
     int* myStr = new int[column_count];
     for (int i = 0; i < column_count; i++) 
     {
@@ -18,7 +18,7 @@ int* makeString(int column_count, int diff)
 int** append2matr(int**& matr, int* myStr, int row_count)
 {
     int** new_matr;
-    new_matr = new int* [row_count+1];
+    new_matr = new int* [sizeof(int*) * row_count];
     for (int i = 0; i < row_count; i++)
     {
         new_matr[i] = matr[i];

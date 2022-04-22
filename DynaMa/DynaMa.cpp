@@ -44,15 +44,18 @@ int main()
     int** matr; // указатель на int*
 
     int row_count;
-    int column_count = 5;
+    int column_count;
  
     cout << "String number ? ";
     cin >> row_count;
+    cout << "Column number ? ";
+    cin >> column_count;
+
     matr = new int* [row_count]; 
 
     for (int i = 0; i < row_count; i++)
     {
-//        matr[i] = new int[column_count];
+        matr[i] = new int[column_count];
         matr[i] = makeString(column_count, i+1);
         matr = append2matr(matr, matr[i], i);
     }
